@@ -3,11 +3,6 @@ pipeline {
         label 'ec2-linux-docker-agent'
     }
     
-    environment {
-        SONARQUBE_SERVER = 'http://your-sonarqube-server'  // Replace with your SonarQube server URL
-        SONARQUBE_TOKEN = credentials('sonar-token')     // Store the SonarQube token securely in Jenkins credentials
-    }
-
     stages {
         stage('Checkout') {
             steps {
