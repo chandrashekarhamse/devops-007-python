@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'ec2-linux-docker-agent'
+    }
     
     environment {
         SONARQUBE_SERVER = 'http://your-sonarqube-server'  // Replace with your SonarQube server URL
