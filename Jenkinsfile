@@ -21,7 +21,7 @@ pipeline {
 
         stage('Run SonarQube Scan') {
             steps {
-                withSonarQubeEnv(installationName: 'sql') {
+                withSonarQubeEnv(installationName: 'sq1') {
                    sh 'sonar-scanner' 
                 }
             }
